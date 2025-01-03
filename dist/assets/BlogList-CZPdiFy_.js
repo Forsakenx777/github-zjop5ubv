@@ -1,0 +1,12 @@
+import{c as l,u as i,j as e,B as t}from"./index-C3lVqZXi.js";import{r as d}from"./vendor-CGJkDKdD.js";import{C as c}from"./Card-DYB_fwiI.js";import{T as n}from"./trash-2-D7kLa5Zx.js";/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const x=l("Pen",[["path",{d:"M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z",key:"5qss01"}]]);/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const h=l("Plus",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"M12 5v14",key:"s699le"}]]);function u(){const a=i(),[r]=d.useState([{id:1,title:"The Rise of Esports in Nepal",status:"Published",date:"2024-03-14"}]);return e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{className:"flex justify-between items-center",children:[e.jsx("h1",{className:"text-2xl font-bold text-white",children:"Blog Posts"}),e.jsxs(t,{variant:"primary",onClick:()=>a("/admin/blog/new"),className:"flex items-center gap-2",children:[e.jsx(h,{className:"w-4 h-4"}),"New Post"]})]}),e.jsx(c,{className:"overflow-hidden",children:e.jsx("div",{className:"overflow-x-auto",children:e.jsxs("table",{className:"w-full",children:[e.jsx("thead",{children:e.jsxs("tr",{className:"border-b border-white/10",children:[e.jsx("th",{className:"text-left p-4 text-gray-400 font-medium",children:"Title"}),e.jsx("th",{className:"text-left p-4 text-gray-400 font-medium",children:"Status"}),e.jsx("th",{className:"text-left p-4 text-gray-400 font-medium",children:"Date"}),e.jsx("th",{className:"text-right p-4 text-gray-400 font-medium",children:"Actions"})]})}),e.jsx("tbody",{children:r.map(s=>e.jsxs("tr",{className:"border-b border-white/10 last:border-0",children:[e.jsx("td",{className:"p-4 text-white",children:s.title}),e.jsx("td",{className:"p-4",children:e.jsx("span",{className:"px-2 py-1 text-sm rounded-full bg-green-500/20 text-green-400",children:s.status})}),e.jsx("td",{className:"p-4 text-gray-400",children:s.date}),e.jsx("td",{className:"p-4",children:e.jsxs("div",{className:"flex justify-end gap-2",children:[e.jsx(t,{variant:"secondary",onClick:()=>a(`/admin/blog/${s.id}/edit`),children:e.jsx(x,{className:"w-4 h-4"})}),e.jsx(t,{variant:"secondary",children:e.jsx(n,{className:"w-4 h-4"})})]})})]},s.id))})]})})})]})}export{u as default};
+//# sourceMappingURL=BlogList-CZPdiFy_.js.map

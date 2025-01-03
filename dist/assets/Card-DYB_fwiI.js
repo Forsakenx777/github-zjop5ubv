@@ -1,0 +1,2 @@
+import{j as t,a as i}from"./index-C3lVqZXi.js";import{r as d}from"./vendor-CGJkDKdD.js";const n=d.forwardRef(({children:r,className:o,hover:a=!1,...e},s)=>t.jsx("div",{ref:s,role:"region",className:i("backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6",a&&"transition-colors duration-300 hover:bg-white/10",o),...e,children:r}));n.displayName="Card";export{n as C};
+//# sourceMappingURL=Card-DYB_fwiI.js.map

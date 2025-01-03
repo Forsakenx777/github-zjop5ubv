@@ -1,0 +1,7 @@
+import{c as t,j as e,B as a}from"./index-C3lVqZXi.js";import{r as l}from"./vendor-CGJkDKdD.js";import{C as o}from"./Card-DYB_fwiI.js";import{T as c}from"./trash-2-D7kLa5Zx.js";/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const n=t("Upload",[["path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",key:"ih7n3h"}],["polyline",{points:"17 8 12 3 7 8",key:"t8dd8p"}],["line",{x1:"12",x2:"12",y1:"3",y2:"15",key:"widbto"}]]);function h(){const[r]=l.useState([{id:1,url:"/Public/Images/logo.png",name:"logo.png"}]),i=()=>{};return e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{className:"flex justify-between items-center",children:[e.jsx("h1",{className:"text-2xl font-bold text-white",children:"Media Library"}),e.jsxs(a,{variant:"primary",onClick:i,className:"flex items-center gap-2",children:[e.jsx(n,{className:"w-4 h-4"}),"Upload"]})]}),e.jsx("div",{className:"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6",children:r.map(s=>e.jsxs(o,{className:"group relative overflow-hidden",children:[e.jsx("img",{src:s.url,alt:s.name,className:"w-full aspect-square object-cover"}),e.jsx("div",{className:"absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2",children:e.jsx(a,{variant:"secondary",children:e.jsx(c,{className:"w-4 h-4"})})})]},s.id))})]})}export{h as default};
+//# sourceMappingURL=MediaLibrary-DwTetQ-S.js.map

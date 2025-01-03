@@ -1,27 +1,17 @@
 import { Suspense, lazy } from 'react';
-import { Outlet } from 'react-router-dom';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import Layout from '@/components/layout/Layout';
+import { adminRoutes } from './adminRoutes';
 
 // Lazy load pages
 const Home = lazy(() => import('@/pages/Home'));
 const About = lazy(() => import('@/pages/About'));
 const Tournaments = lazy(() => import('@/pages/Tournaments'));
-const TournamentDetails = lazy(() => import('@/pages/TournamentDetails'));
 const PastEvents = lazy(() => import('@/pages/PastEvents'));
 const Blog = lazy(() => import('@/pages/Blog'));
-const BlogPost = lazy(() => import('@/pages/Blog/components/BlogPost'));
-const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'));
-const TermsOfService = lazy(() => import('@/pages/Termsofservice'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
-// Admin pages
-const AdminLogin = lazy(() => import('@/pages/admin/Login'));
-const AdminDashboard = lazy(() => import('@/pages/admin/Dashboard'));
-const TournamentForm = lazy(() => import('@/pages/admin/tournaments/TournamentForm'));
-
 const SuspenseWrapper = ({ children }: { children: React.ReactNode }) => (
-  <Suspense fallback={<LoadingSpinner />}>
+  <Suspense fallback={<div>Loading...</div>}>
     {children}
   </Suspense>
 );
@@ -30,117 +20,56 @@ export const routes = [
   {
     path: '/',
     element: <Layout />,
-    errorElement: <NotFound />,
     children: [
-      { 
-        index: true, 
+      {
+        index: true,
         element: (
           <SuspenseWrapper>
             <Home />
           </SuspenseWrapper>
-        )
+        ),
       },
-      { 
-        path: 'about', 
+      {
+        path: 'about',
         element: (
           <SuspenseWrapper>
             <About />
           </SuspenseWrapper>
-        )
+        ),
       },
-      { 
-        path: 'tournaments', 
+      {
+        path: 'tournaments',
         element: (
           <SuspenseWrapper>
             <Tournaments />
           </SuspenseWrapper>
-        )
+        ),
       },
-      { 
-        path: 'tournament/:id', 
-        element: (
-          <SuspenseWrapper>
-            <TournamentDetails />
-          </SuspenseWrapper>
-        )
-      },
-      { 
-        path: 'past-events', 
+      {
+        path: 'past-events',
         element: (
           <SuspenseWrapper>
             <PastEvents />
           </SuspenseWrapper>
-        )
+        ),
       },
-      { 
-        path: 'blog', 
+      {
+        path: 'blog',
         element: (
           <SuspenseWrapper>
             <Blog />
           </SuspenseWrapper>
-        )
+        ),
       },
-      { 
-        path: 'blog/:slug', 
-        element: (
-          <SuspenseWrapper>
-            <BlogPost />
-          </SuspenseWrapper>
-        )
-      },
-      { 
-        path: 'privacy-policy', 
-        element: (
-          <SuspenseWrapper>
-            <PrivacyPolicy />
-          </SuspenseWrapper>
-        )
-      },
-      { 
-        path: 'terms-of-service', 
-        element: (
-          <SuspenseWrapper>
-            <TermsOfService />
-          </SuspenseWrapper>
-        )
-      }
     ],
   },
+  adminRoutes,
   {
-    path: '/admin',
-    children: [
-      {
-        path: 'login',
-        element: (
-          <SuspenseWrapper>
-            <AdminLogin />
-          </SuspenseWrapper>
-        )
-      },
-      {
-        path: 'dashboard',
-        element: (
-          <SuspenseWrapper>
-            <AdminDashboard />
-          </SuspenseWrapper>
-        )
-      },
-      {
-        path: 'tournaments/new',
-        element: (
-          <SuspenseWrapper>
-            <TournamentForm />
-          </SuspenseWrapper>
-        )
-      },
-      {
-        path: 'tournaments/:id/edit',
-        element: (
-          <SuspenseWrapper>
-            <TournamentForm />
-          </SuspenseWrapper>
-        )
-      }
-    ]
-  }
+    path: '*',
+    element: (
+      <SuspenseWrapper>
+        <NotFound />
+      </SuspenseWrapper>
+    ),
+  },
 ];
